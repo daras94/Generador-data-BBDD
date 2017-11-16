@@ -11,13 +11,15 @@
 public class Consulta {
 
     private int mes;
-    private String dni_paciente;
-    private String dni_medico;
+    private int dni_paciente;
+    private int dni_medico;
     private boolean prueba = false;
     private boolean operacion = false;
 
-    public Consulta(String dp, String dm) {
+    public Consulta() {
+        int dm=(int)(1+Math.random()*500000);
         this.dni_medico = dm;
+        int dp=(int)(1+Math.random()*8000000);
         this.dni_paciente = dp;
         int mes = (int)(1 + Math.random() * 12);
         this.mes = mes;
