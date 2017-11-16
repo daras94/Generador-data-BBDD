@@ -15,6 +15,22 @@ public class Bbdd {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        for(int i=1000;i>=1;i--){
+            LanzadorHospital l= new LanzadorHospital();
+            l.run(i);
+        }
+        for(int j=50000;j<=1;j--){
+            LanzadorMedicos lm=new LanzadorMedicos();
+            lm.run(j);
+        }
+        for(int t=50000;t<=1;t--){
+            LanzadorPacientes lm=new LanzadorPacientes();
+            lm.run(t);
+        }
+        for(int p=50000;p<=1;p--){
+            LanzadorConsultas lm=new LanzadorConsultas();
+            lm.run(p);
+        }
     }
     
 }

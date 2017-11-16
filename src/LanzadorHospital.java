@@ -8,9 +8,13 @@
  *
  * @author david
  */
-public class Lanzador extends Thread implements Runnable{
-    @Override
-    public void run(){
-        
+public class LanzadorHospital extends Thread implements Runnable{
+    
+    
+    
+    
+    public void run(int i){
+        String n="hospital"+i;
+        Hospital h= new Hospital(i,n);
     }
 }
