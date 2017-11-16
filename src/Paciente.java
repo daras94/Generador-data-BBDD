@@ -10,4 +10,12 @@
  */
 public class Paciente {
     private String dni;
+    public Paciente(String dni){
+        this.dni=dni;
+    }
+    public Paciente(){
+        for(int i=0;i<=7;i++){
+            
+        }
+    }
 }
