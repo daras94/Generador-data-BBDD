@@ -1,5 +1,10 @@
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,7 +27,14 @@ public class LanzadorPacientes extends Thread {
         this.i = i;
     }
     
+    @Override
     public void run() {
-        Paciente h = new Paciente(i);
+        try {
+            Paciente h = new Paciente(i);
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("");
+        } catch (SQLException ex) {
+            Logger.getLogger(LanzadorPacientes.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

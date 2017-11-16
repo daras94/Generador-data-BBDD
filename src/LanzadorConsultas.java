@@ -1,5 +1,10 @@
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,7 +29,12 @@ public class LanzadorConsultas extends Thread{
     
     @Override
     public void run(){
-        Consulta h= new Consulta();
-        
+        try {
+            Consulta h= new Consulta();
+            Statement st=con.createStatement();
+            ResultSet rs=st.executeQuery("");
+        } catch (SQLException ex) {
+            Logger.getLogger(LanzadorConsultas.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

@@ -25,9 +25,9 @@ public class Bbdd {
     private Connection con;
 
     public Bbdd() {
-        this.user = new String[]{"", ""};
-        this.url = new String[]{"", "root"};
-        this.pass = new String[]{"", ""};
+        this.user = new String[]{"root", "postgres"};
+        this.url = new String[]{"jdbc:postgresql://localhost:5432/pacientes", "jdbc:mysql://localhost:3306/pacientes"};
+        this.pass = new String[]{"551994", "551994"};
     }
 
     /**
@@ -65,7 +65,7 @@ public class Bbdd {
             Logger.getLogger(Bbdd.class.getName()).log(Level.SEVERE, null, ex);
         }
         System.out.println("/*************************************************/");
-        System.out.println("Final de la inserpcion.");
+        System.out.println(" - Final de la inserpcion.");
     }
     
     private void connect(int opc) {
