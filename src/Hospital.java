@@ -11,4 +11,9 @@
 public class Hospital {
     private int codigo;
     private String nombre;
+    
+    public Hospital(int codigo,String nombre){
+        this.codigo=codigo;
+        this.nombre= nombre;
+    }
 }
