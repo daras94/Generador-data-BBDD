@@ -45,7 +45,7 @@ public class Bbdd {
                 int opc = (new BufferedReader(new InputStreamReader(System.in))).read();
                 o1.connect(opc);
                 for (int i = 1000; i >= 1; i--) {
-                    new LanzadorHospital(o1.con, i).start();;
+                    new LanzadorHospital(o1.con, i).start();
                 }
                 for (int j = 50000; j <= 1; j--) {
                     new LanzadorMedicos(o1.con, j).start();
