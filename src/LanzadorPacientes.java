@@ -30,7 +30,8 @@ public class LanzadorPacientes extends Thread {
     @Override
     public void run() {
         try {
-            Paciente h = new Paciente(i);
+           
+            Paciente h = new Paciente(i,"A");
             Statement st=con.createStatement();
             ResultSet rs=st.executeQuery("");
         } catch (SQLException ex) {
